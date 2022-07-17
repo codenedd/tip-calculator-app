@@ -24,19 +24,19 @@
             <div class="percent">
               <p>Select Tip %</p>
               <div class="percent__amount">
-                <button>5%</button>
-                <button>10%</button>
-                <button>15%</button>
-                <button>25%</button>
-                <button>50%</button>
+                <button class="percent__amount__button">5%</button>
+                <button class="percent__amount__button">10%</button>
+                <button class="percent__amount__button">15%</button>
+                <button class="percent__amount__button">25%</button>
+                <button class="percent__amount__button">50%</button>
                 <div class="calc-input percent-input">
-                  <input type="number" id="percent" name="custom_percent" placeholder="Custom" />
+                  <input type="number" id="percent" name="custom_percent" placeholder="Custom" min="0" max="100" />
                 </div>
               </div>
             </div>
             <div class="people">
               <label for="people">Number of People</label>
-              <div class="calc-input bill-amount">
+              <div class="calc-input bill-amount people-input">
                 <img src="images/icon-person.svg" />
                 <input type="number" id="people" name="people" placeholder="0" />
               </div>
@@ -54,7 +54,7 @@
               </div>
             </div>
             <div class="results__reset">
-              <button type="button">RESET</button>
+              <button id="reset" type="button">RESET</button>
             </div>
           </div>
     </main>

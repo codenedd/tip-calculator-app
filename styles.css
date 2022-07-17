@@ -25,7 +25,7 @@ body {
 
 .container {
   width: 1000px;
-  height: 55vh;
+  height: 500px;
   background-color: var(--white);
   border-radius: 30px;
   display: flex;
@@ -94,7 +94,7 @@ input[type="number"]::-webkit-inner-spin-button {
   grid-template-rows: 1fr 1fr;
 }
 
-.percent__amount button {
+.percent__amount__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,6 +109,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .percent__amount button:hover {
   cursor: pointer;
+  background-color: var(--strongcyan);
+  color: var(--verydarkcyan);
+}
+
+.percent__amount__toggled {
   background-color: var(--strongcyan);
   color: var(--verydarkcyan);
 }
@@ -191,4 +196,17 @@ footer {
 footer a {
   text-decoration: none;
   color: var(--strongcyan);
+}
+
+.input-zero {
+  outline: 2px solid lightcoral;
+}
+
+.people label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people label span {
+  color: lightcoral;
 }
