@@ -15,20 +15,52 @@
   <body>
     <main>
       <div class="container">
-        <div class="calc">
-          <label for="bill">Bill</label>
-          <div class="bill-input">
-            <img src="images/icon-dollar.svg" />
-            <input type="number" id="bill" name="bill" placeholder="0" />
+          <div class="calc">
+            <label for="bill">Bill</label>
+            <div class="calc-input bill-amount">
+              <img src="images/icon-dollar.svg" alt=""/>
+              <input type="number" id="bill" name="bill" placeholder="0" />
+            </div>
+            <div class="percent">
+              <p>Select Tip %</p>
+              <div class="percent__amount">
+                <button>5%</button>
+                <button>10%</button>
+                <button>15%</button>
+                <button>25%</button>
+                <button>50%</button>
+                <div class="calc-input percent-input">
+                  <input type="number" id="percent" name="custom_percent" placeholder="Custom" />
+                </div>
+              </div>
+            </div>
+            <div class="people">
+              <label for="people">Number of People</label>
+              <div class="calc-input bill-amount">
+                <img src="images/icon-person.svg" />
+                <input type="number" id="people" name="people" placeholder="0" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="results"></div>
-      </div>
+          <div class="results">
+            <div class="results__tips">
+              <div class="results__amount">
+                <div class="results__amount___text"><p>Tip Amount</p> / person</div>
+                <div class="results__score">$0.00</div>
+              </div> 
+              <div class="results__amount">
+                <div class="results__amount___text"><p>Total</p> / person</div>
+                <div class="results__score">$0.00</div>
+              </div>
+            </div>
+            <div class="results__reset">
+              <button type="button">RESET</button>
+            </div>
+          </div>
     </main>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount / person Total / person Reset
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <footer>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/happnd">happnd</a>.
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
