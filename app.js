@@ -1,15 +1,17 @@
 const calculator = document.querySelector(".container");
 const billAmount = document.querySelector("#bill");
+const billInput = document.querySelector(".calc-input");
+const labelOfBill = document.querySelector(".calc label");
 const percentAmount = document.querySelector("#percent");
 const peopleAmount = document.querySelector("#people");
 const labelOfPeople = document.querySelector(".people label");
 const peopleInput = document.querySelector(".people-input");
 const results = document.querySelectorAll(".results__score");
 const percentButtons = document.querySelectorAll(".percent__amount button");
+const percentInput = document.querySelector(".percent-input");
+const labelOfPercent = document.querySelector(".percent label");
 const reset = document.querySelector("#reset");
 let tipAmount;
-
-const percents = ["5%", "10%", "15%", "25%", "50%"];
 
 calculator.addEventListener("click", (event) => {
   if (event.target.type === "submit") {
@@ -38,9 +40,6 @@ calculator.addEventListener("input", (event) => {
     tipAmount = percentAmount.value / 100;
     countTip();
   }
-
-  if (event.target === billAmount && billAmount.value > 0) {
-  }
 });
 
 function countTip() {
@@ -54,11 +53,21 @@ function countTip() {
 }
 
 function controlInputs() {
+  if (percentAmount.value == 0 && !percentInput.classList.contains("input-zero")) {
+    percentInput.classList.add("input-zero");
+    labelOfPercent.innerHTML += "<span>Can't be zero<span>";
+  }
+
+  if ((percentAmount.value > 0 || percentAmount.value == "") && percentInput.classList.contains("input-zero")) {
+    percentInput.classList.remove("input-zero");
+    labelOfPercent.innerHTML = "Select Tip %";
+  }
+
   if (percentAmount.value > 100) {
     percentAmount.value = 100;
   }
   if (percentAmount.value < 0) {
-    percentAmount.value = 0;
+    percentAmount.value = 1;
   }
 
   if (String(percentAmount.value).charAt(0) === "0") {
@@ -77,5 +86,27 @@ function controlInputs() {
 
   if (String(peopleAmount.value).charAt(0) === "0") {
     peopleAmount.value = Number(peopleAmount.value);
+  }
+
+  if (billAmount.value < 0) {
+    billAmount.value = 0;
+  }
+
+  if (String(billAmount.value).charAt(0) === "0") {
+    billAmount.value = Number(billAmount.value);
+  }
+
+  if (billAmount.value == 0 && !billInput.classList.contains("input-zero")) {
+    billInput.classList.add("input-zero");
+    labelOfBill.innerHTML += "<span>Can't be zero<span>";
+  }
+
+  if ((billAmount.value > 0 || billAmount.value == "") && billInput.classList.contains("input-zero")) {
+    billInput.classList.remove("input-zero");
+    labelOfBill.innerHTML = "Bill";
+  }
+
+  if (!Number.isInteger(Number(billAmount.value))) {
+    billAmount.value = Number(billAmount.value).toFixed(2);
   }
 }

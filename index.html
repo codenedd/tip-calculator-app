@@ -15,51 +15,59 @@
   <body>
     <main>
       <div class="container">
-          <div class="calc">
-            <label for="bill">Bill</label>
-            <div class="calc-input bill-amount">
-              <img src="images/icon-dollar.svg" alt=""/>
-              <input type="number" id="bill" name="bill" placeholder="0" />
-            </div>
-            <div class="percent">
-              <p>Select Tip %</p>
-              <div class="percent__amount">
-                <button class="percent__amount__button">5%</button>
-                <button class="percent__amount__button">10%</button>
-                <button class="percent__amount__button">15%</button>
-                <button class="percent__amount__button">25%</button>
-                <button class="percent__amount__button">50%</button>
-                <div class="calc-input percent-input">
-                  <input type="number" id="percent" name="custom_percent" placeholder="Custom" min="0" max="100" />
-                </div>
-              </div>
-            </div>
-            <div class="people">
-              <label for="people">Number of People</label>
-              <div class="calc-input bill-amount people-input">
-                <img src="images/icon-person.svg" />
-                <input type="number" id="people" name="people" placeholder="0" />
+        <div class="calc">
+          <label for="bill">Bill</label>
+          <div class="calc-input bill-amount">
+            <img src="images/icon-dollar.svg" alt="" />
+            <input type="number" id="bill" name="bill" placeholder="0" step="0.01" />
+          </div>
+          <div class="percent">
+            <label>Select Tip %</label>
+            <div class="percent__amount">
+              <button class="percent__amount__button">5%</button>
+              <button class="percent__amount__button">10%</button>
+              <button class="percent__amount__button">15%</button>
+              <button class="percent__amount__button">25%</button>
+              <button class="percent__amount__button">50%</button>
+              <div class="calc-input percent-input">
+                <input type="number" id="percent" name="custom_percent" placeholder="Custom" min="0" max="100" />
               </div>
             </div>
           </div>
-          <div class="results">
-            <div class="results__tips">
-              <div class="results__amount">
-                <div class="results__amount___text"><p>Tip Amount</p> / person</div>
-                <div class="results__score">$0.00</div>
-              </div> 
-              <div class="results__amount">
-                <div class="results__amount___text"><p>Total</p> / person</div>
-                <div class="results__score">$0.00</div>
-              </div>
-            </div>
-            <div class="results__reset">
-              <button id="reset" type="button">RESET</button>
+          <div class="people">
+            <label for="people">Number of People</label>
+            <div class="calc-input bill-amount people-input">
+              <img src="images/icon-person.svg" />
+              <input type="number" id="people" name="people" placeholder="0" />
             </div>
           </div>
+        </div>
+        <div class="results">
+          <div class="results__tips">
+            <div class="results__amount">
+              <div class="results__amount___text">
+                <p>Tip Amount</p>
+                / person
+              </div>
+              <div class="results__score">$0.00</div>
+            </div>
+            <div class="results__amount">
+              <div class="results__amount___text">
+                <p>Total</p>
+                / person
+              </div>
+              <div class="results__score">$0.00</div>
+            </div>
+          </div>
+          <div class="results__reset">
+            <button id="reset" type="button">RESET</button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/happnd">happnd</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/happnd">happnd</a>.
     </footer>
     <script src="app.js"></script>
   </body>

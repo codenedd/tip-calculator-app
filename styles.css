@@ -202,11 +202,72 @@ footer a {
   outline: 2px solid lightcoral;
 }
 
-.people label {
+.calc label {
   display: flex;
   justify-content: space-between;
 }
 
-.people label span {
+.calc label span {
   color: lightcoral;
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    height: 120vh;
+  }
+
+  .container {
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    padding: 30px;
+  }
+
+  .calc {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 30px;
+  }
+
+  .results {
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    border-radius: 12px;
+    padding: 25px 15px;
+  }
+
+  .results__score {
+    font-size: 30px;
+  }
+
+  .percent__amount {
+    height: 180px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .results__amount {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .results__amount p {
+    font-size: 16px;
+  }
+
+  .results__reset button {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .results__reset {
+    height: 40%;
+  }
+
+  footer {
+    top: 20px;
+    text-align: center;
+  }
 }
