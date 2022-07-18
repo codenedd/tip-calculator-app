@@ -39,8 +39,13 @@ body {
 }
 
 label {
-  display: block;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+label span {
+  color: lightcoral;
 }
 
 .calc-input {
@@ -59,11 +64,6 @@ label {
   cursor: pointer;
 }
 
-.bill-amount input {
-  width: 100%;
-  color: var(--verydarkcyan);
-}
-
 input {
   border: none;
   font-family: "Space Mono", monospace;
@@ -71,6 +71,8 @@ input {
   font-size: 24px;
   background: none;
   outline: none;
+  color: var(--verydarkcyan);
+  width: 100%;
 }
 
 ::placeholder {
@@ -121,10 +123,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .percent-input {
   padding: 0px;
   margin: 5px;
-}
-
-.percent-input input {
-  width: 100%;
 }
 
 .percent-input input::placeholder {
@@ -200,15 +198,6 @@ footer a {
 
 .input-zero {
   outline: 2px solid lightcoral;
-}
-
-.calc label {
-  display: flex;
-  justify-content: space-between;
-}
-
-.calc label span {
-  color: lightcoral;
 }
 
 @media screen and (max-width: 860px) {

@@ -17,12 +17,12 @@
       <div class="container">
         <div class="calc">
           <label for="bill">Bill</label>
-          <div class="calc-input bill-amount">
+          <div class="calc-input">
             <img src="images/icon-dollar.svg" alt="" />
-            <input type="number" id="bill" name="bill" placeholder="0" step="0.01" />
+            <input type="number" id="bill" name="bill" placeholder="0" step="0.01" min="1" />
           </div>
           <div class="percent">
-            <label>Select Tip %</label>
+            <label for="percent">Select Tip %</label>
             <div class="percent__amount">
               <button class="percent__amount__button">5%</button>
               <button class="percent__amount__button">10%</button>
@@ -30,15 +30,15 @@
               <button class="percent__amount__button">25%</button>
               <button class="percent__amount__button">50%</button>
               <div class="calc-input percent-input">
-                <input type="number" id="percent" name="custom_percent" placeholder="Custom" min="0" max="100" />
+                <input type="number" id="percent" name="custom_percent" placeholder="Custom" min="1" max="100" />
               </div>
             </div>
           </div>
           <div class="people">
             <label for="people">Number of People</label>
-            <div class="calc-input bill-amount people-input">
+            <div class="calc-input">
               <img src="images/icon-person.svg" />
-              <input type="number" id="people" name="people" placeholder="0" />
+              <input type="number" id="people" name="people" placeholder="0" min="1" />
             </div>
           </div>
         </div>
