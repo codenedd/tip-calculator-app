@@ -12,6 +12,11 @@ html {
   height: 100%;
 }
 
+header {
+  position: relative;
+  top: -100px;
+}
+
 body {
   height: 100%;
   margin: 0px;
@@ -202,7 +207,7 @@ footer a {
 
 @media screen and (max-width: 860px) {
   body {
-    height: 120vh;
+    height: 150vh;
   }
 
   .container {
@@ -258,5 +263,9 @@ footer a {
   footer {
     top: 20px;
     text-align: center;
+  }
+
+  header {
+    top: -30px;
   }
 }
