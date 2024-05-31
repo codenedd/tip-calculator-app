@@ -11,4 +11,3 @@
 - Semantic HTML5 markup
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
