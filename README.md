@@ -8,6 +8,7 @@
 
 ### Built with
 
+- Vanilla JavaScript
 - Semantic HTML5 markup
 - Flexbox
 - CSS Grid
